@@ -39,7 +39,7 @@ std::stack<int> RPN(char *argv) {
     }
 
     if (stack.size() > 1) {
-        std::cout << "invalide number of operand" << std::endl; 
+        std::cout << "invalid number of operand" << std::endl; 
         while (stack.size() != 0)
             stack.pop();
     }
@@ -48,7 +48,7 @@ std::stack<int> RPN(char *argv) {
 
 int main(int argc, char **argv) {
     if (argc != 2) {
-        std::cout << "invalide number parameter" << std::endl;
+        std::cout << "invalid number parameter" << std::endl;
         return (0);
     }
     std::stack<int> stack = RPN(argv[1]);
