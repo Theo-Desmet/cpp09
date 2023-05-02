@@ -1,5 +1,7 @@
 #include <iostream>
 #include <sstream>
+#include <vector>
+#include <deque>
 
 #include "PmergeMe.hpp"
 
@@ -20,9 +22,11 @@ int main(int argc, char **argv) {
 
 	PmergeMe			merge;
 	std::vector<int>	vec;
+	// std::deque<int> 	deque;
+
 	for (int i = 1; i < argc; i++)
 		vec.push_back(stringToInt(argv[i]));
-	
+	merge.mergeInsertSort<std::vector<int> >(vec);
 	for (int i = 0; i < argc - 1; i++)
 		std::cout << vec[i] << " " << std::endl;
 }

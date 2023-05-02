@@ -14,7 +14,7 @@ CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Werror -Wextra -g
 
-FILES = main.cpp PmergeMe.cpp
+FILES = PmergeMe.cpp main.cpp
 
 OBJS = $(FILES:.cpp=.o)
 
