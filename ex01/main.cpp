@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+#include <deque>
 #include <cstring>
 
 int RPNCalcul(int nb1, int nb2, char signe) {
@@ -51,7 +52,7 @@ int main(int argc, char **argv) {
         std::cout << "invalid number parameter" << std::endl;
         return (0);
     }
-    std::stack<int> stack = RPN(argv[1]);
+    std::stack<int, std::deque<int> > stack = RPN(argv[1]);
     if (!stack.empty())
         std::cout << stack.top() << std::endl;
 
