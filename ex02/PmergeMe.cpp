@@ -22,6 +22,20 @@ double	PmergeMe::deltaTime(long long time) {
 	return (getTime() - time);
 }
 
+int		PmergeMe::checkInput(char **argv, int argc) {
+	for (int i = 1; i < argc; i++) {
+		std::string str = argv[i];
+		if (str.empty())
+			return (0);
+		for (size_t j = 0; j < str.size(); j++) {
+			if (!((str[j] >= '0' && str[j] <= '9') || str[j] == ' '))
+				return (0);
+		}
+	}
+	return (1);
+}
+
+
 void	PmergeMe::mergeInsertSortVector(std::vector<int>& vec) {
 	std::vector<int>::iterator middle = vec.begin()
 			+ (vec.size()) / 2;

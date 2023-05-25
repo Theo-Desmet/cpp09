@@ -21,6 +21,11 @@ int main(int argc, char **argv) {
 	}
 
 	PmergeMe			merge;
+	if (!merge.checkInput(argv, argc)) {
+		std::cout << "Error: Invalide input" << std::endl;
+		return (1);
+	}
+
 	std::vector<int>	vec;
 	for (int i = 1; i < argc; i++)
 		vec.push_back(stringToInt(argv[i]));
@@ -36,4 +41,6 @@ int main(int argc, char **argv) {
 	merge.timeContainer2 = merge.deltaTime(merge.timeContainer2);
 
 	merge.printSort(vec, argc, argv);
+
+	return (0);
 }

@@ -43,8 +43,8 @@ class PmergeMe {
 		};
 
 		void	mergeInsertSortVector(std::vector<int>& vec);
-
 		void	mergeInsertSortList(std::list<int>& list);
+		int		checkInput(char **str, int argc);
 
 		double	getTime();
 		double	deltaTime(long long time);
